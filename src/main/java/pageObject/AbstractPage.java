@@ -14,10 +14,14 @@ public class AbstractPage {
         this.singletoneWebDriver = SingletoneWebDriver.getSingletoneWebDriver();
     }
 
-	public void navigateToMail() throws SQLException {
+	public void navigateToMail() {
 		DataBase dataBase = new DataBase();
 		singletoneWebDriver.manage().window().maximize();
-		singletoneWebDriver.get(String.valueOf(dataBase.getURL()));
+		try {
+			singletoneWebDriver.get(String.valueOf(dataBase.getURL()));
+		} catch (SQLException e) {
+			e.printStackTrace();e.printStackTrace();
+		}
 	}
 
 }

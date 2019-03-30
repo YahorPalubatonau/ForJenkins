@@ -20,12 +20,13 @@ public class AbstractTest {
     @BeforeClass
     public static void setUpDriver() {
         singletoneWebDriver = SingletoneWebDriver.getSingletoneWebDriver();
+
         singletoneWebDriver.manage().window().maximize();
         loginPage = new LoginPage(singletoneWebDriver);
     }
 
     @Before
-    public void navigateToLoginPage() throws SQLException {
+    public void navigateToLoginPage()  {
         loginPage.navigateToMail();
     }
 
@@ -36,7 +37,7 @@ public class AbstractTest {
 
     @AfterClass
     public static void closeResources() {
-        singletoneWebDriver.quit();
+       // singletoneWebDriver.quit();
     }
 
 }
