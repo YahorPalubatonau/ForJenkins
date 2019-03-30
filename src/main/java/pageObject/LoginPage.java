@@ -1,5 +1,6 @@
 package pageObject;
 
+import mx4j.log.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -38,6 +39,7 @@ public class LoginPage extends AbstractPage {
 
     public WebElement logOutLinkPresents() {
         try {
+            System.out.println("Hey");
             logoutLink = singletoneWebDriver.findElement(By.id("PH_logoutLink"));
             new WebDriverWait(singletoneWebDriver, LINK_PRESENSE_TIMEOUT).until(ExpectedConditions.visibilityOf(logoutLink));
             return logoutLink;

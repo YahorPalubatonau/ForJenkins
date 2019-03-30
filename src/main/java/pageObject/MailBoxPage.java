@@ -91,7 +91,7 @@ public class MailBoxPage extends AbstractPage {
     public MailBoxPage goToWriteSection() {
         writeMailButton = singletoneWebDriver.findElement(By.xpath(".//div[@id='b-toolbar__left']//div//a[contains(@class,'b-toolbar__btn b-toolbar__btn_with-foldings js-shortcut')]"));
         writeMailButton.click();
-        return mailBox;
+        return new MailBoxPage(SingletoneWebDriver.getSingletoneWebDriver());
     }
 
     public MailBoxPage enterToWhom() throws SQLException {
@@ -99,7 +99,7 @@ public class MailBoxPage extends AbstractPage {
         fieldOfToWhom = singletoneWebDriver.findElement(By.xpath(".//textarea[@data-original-name='To']"));
         fieldOfToWhom.clear();
         fieldOfToWhom.sendKeys(dataBase.getEmail(1));
-        return mailBox;
+        return new MailBoxPage(SingletoneWebDriver.getSingletoneWebDriver());
     }
 
     public MailBoxPage enterMessage() throws SQLException {
@@ -111,13 +111,13 @@ public class MailBoxPage extends AbstractPage {
         fieldOfMessage.clear();
         fieldOfMessage.sendKeys(dataBase.getText(1));
         singletoneWebDriver.switchTo().defaultContent();
-        return mailBox;
+        return new MailBoxPage(SingletoneWebDriver.getSingletoneWebDriver());
     }
 
     public MailBoxPage clickSendButton() {
         sendButton = singletoneWebDriver.findElement(By.xpath(".//div[@id='b-toolbar__right']//div//div[@class='b-toolbar__btn b-toolbar__btn_ b-toolbar__btn_false js-shortcut']"));
         sendButton.click();
-        return mailBox;
+        return new MailBoxPage(SingletoneWebDriver.getSingletoneWebDriver());
     }
 
     public boolean messageIsPresent() {
