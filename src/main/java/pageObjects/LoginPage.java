@@ -41,9 +41,11 @@ public class LoginPage extends AbstractPage {
 
     public void enterLoginAndPass() {
         loginField.clear();
-        loginField.sendKeys(dataBase.createQuery(LOGIN, 1));
+        loginField.sendKeys("egor6661999");
+       // loginField.sendKeys(dataBase.createQuery(LOGIN, 1));
         passwordField.clear();
-        passwordField.sendKeys(dataBase.createQuery(PASSWORD, 1));
+        passwordField.sendKeys("Isaac96Soles13");
+       // passwordField.sendKeys(dataBase.createQuery(PASSWORD, 1));
     }
 
     public void clickEnterButton() {

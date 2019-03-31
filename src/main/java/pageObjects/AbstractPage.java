@@ -29,7 +29,8 @@ public class AbstractPage {
         webDriver = Singleton.getSingletoneWebDriver();
         webDriver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
         webDriver.manage().window().maximize();
-        webDriver.get(dataBase.createQuery(SELECT_URL_FROM_WEBPAGES, 1));
+        webDriver.get("http://mail.ru");
+        //webDriver.get(dataBase.createQuery(SELECT_URL_FROM_WEBPAGES, 1));
     }
 
     @AfterClass

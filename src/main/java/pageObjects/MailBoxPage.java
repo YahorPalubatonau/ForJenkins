@@ -135,14 +135,16 @@ public class MailBoxPage extends AbstractPage {
 
     public void enterToWhom() {
         fieldOfToWhom.clear();
-        fieldOfToWhom.sendKeys(dataBase.createQuery(SELECT_EMAIL, 1));
+        fieldOfToWhom.sendKeys("whynobrain@gmail.com");
+        //fieldOfToWhom.sendKeys(dataBase.createQuery(SELECT_EMAIL, 1));
     }
 
     public void enterMessage() {
         webDriver.switchTo().frame(changeFrame);
         fieldOfMessage.click();
         fieldOfMessage.clear();
-        fieldOfMessage.sendKeys(dataBase.createQuery(SELECT_TEXT, 1));
+        fieldOfMessage.sendKeys("Gyuj");
+        //fieldOfMessage.sendKeys(dataBase.createQuery(SELECT_TEXT, 1));
         webDriver.switchTo().defaultContent();
     }
 

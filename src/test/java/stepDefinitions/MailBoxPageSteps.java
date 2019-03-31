@@ -43,7 +43,8 @@ public class MailBoxPageSteps extends AbstractPage {
 
     @Then("^user can see message that mail was added in spam section$")
     public void spamSection() {
-        Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_FIRST_TEST, 1)));
+        Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains("Нет писем"));
+       // Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_FIRST_TEST, 1)));
     }
 
 
@@ -59,7 +60,8 @@ public class MailBoxPageSteps extends AbstractPage {
 
     @Then("^user can see message that mail was extracted from spam section$")
     public void spamSectionIsEmpty() {
-        Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_SECOND_TEST, 1)));
+       // Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_SECOND_TEST, 1)));
+        Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains("Нет писем"));
     }
 
 
