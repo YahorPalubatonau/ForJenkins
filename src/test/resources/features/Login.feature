@@ -1,7 +1,6 @@
-
+@Egor
 Feature: Test login page
 
-  @Egor
   Scenario: Verify that message can move to Spam section
     Given user login in mailBox
     When user clicks on mail checkbox
@@ -9,7 +8,7 @@ Feature: Test login page
   #  And user confirm add massage to spam
     Then user can see message that mail was added in spam section
 
-  @Egor
+
   Scenario: Verify that message can move from Spam section
     Given user login in mailBox
     # When user clicks on span section button
@@ -18,19 +17,19 @@ Feature: Test login page
     When user extracts mail from spam section
     Then user can see message that mail was extracted from spam section
 
-  @Egor
+
   Scenario: Verify that user can marks three checkboxes
     Given user login in mailBox
     When user clicks on inbox mail button
     And user clicks on three checkboxes
     Then user can see all three checkboxes are marked
 
-  @Egor
+
   Scenario: Verify that user can unmarks three checkboxes
     Given user login in mailBox
     When user clicks on unselect all button
     Then user can see all checkboxes are unmarked
-
+  @Egor
   Scenario: Verify that user can sends mail for some people
     Given user login in mailBox
     When user clicks on button Write mail
