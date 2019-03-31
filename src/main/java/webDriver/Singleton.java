@@ -12,6 +12,7 @@ public class Singleton {
 
     public static WebDriver getSingletoneWebDriver() {
         if (webDriver == null) {
+            System.setProperty("webdriver.chrome.driver", "C:\\Users\\SatanEggs\\Downloads\\chromedriver_win32");
             ChromeOptions chromeOptions = new ChromeOptions();
             chromeOptions.addArguments("--disable-gpu");
             chromeOptions.addArguments("--no-sandbox");
