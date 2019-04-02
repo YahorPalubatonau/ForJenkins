@@ -11,7 +11,7 @@ public class MailBoxPageSteps extends AbstractPage {
 
     public static final String WORDS_FOR_SECOND_TEST = "SELECT checkwords FROM test";
     public static final String WORDS_FOR_FIRST_TEST = "SELECT words FROM wordsfortesting";
-    public static final int EXPECTED_COUNT_OF_UNMARKED_CHECKBOXES = 3;
+    public static final int EXPECTED_COUNT_OF_UNMARKED_CHECKBOXES = 4;
     MailBoxPage mailBoxPage = new MailBoxPage(webDriver);
     FacadeForSpamBox facadeForSpamBox = new FacadeForSpamBox();
 
@@ -36,12 +36,12 @@ public class MailBoxPageSteps extends AbstractPage {
         mailBoxPage.moveMessageToSpam();
     }
 
-    @When("^user confirm add massage to spam$")
+    @When("^user confirms add massage to spam$")
     public void confirmAddToSpam() {
         mailBoxPage.confirmMoveMessageToSpam();
     }
 
-    @Then("^user can see message that mail was added in spam section$")
+    @Then("^user can sees message that mail was added in spam section$")
     public void spamSection() {
         Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains("Нет писем"));
        // Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_FIRST_TEST, 1)));
@@ -58,7 +58,7 @@ public class MailBoxPageSteps extends AbstractPage {
         mailBoxPage.moveMessageToInput();
     }
 
-    @Then("^user can see message that mail was extracted from spam section$")
+    @Then("^user can sees message that mail was extracted from spam section$")
     public void spamSectionIsEmpty() {
        // Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains(dataBase.createQuery(WORDS_FOR_SECOND_TEST, 1)));
         Assert.assertTrue(mailBoxPage.getTextFromSpamSection().contains("Нет писем"));
@@ -75,9 +75,9 @@ public class MailBoxPageSteps extends AbstractPage {
         mailBoxPage.tipTreeMessageinSpam();
     }
 
-    @Then("^user can see all three checkboxes are marked$")
+    @Then("^user can sees all three checkboxes are marked$")
     public void seeTreeCheckboxes() {
-        Assert.assertEquals(3, mailBoxPage.getCountOfSelectedChecboxes());
+        Assert.assertEquals(EXPECTED_COUNT_OF_UNMARKED_CHECKBOXES, mailBoxPage.getCountOfSelectedChecboxes());
     }
 
 
@@ -86,9 +86,9 @@ public class MailBoxPageSteps extends AbstractPage {
         mailBoxPage.unselectAll();
     }
 
-    @Then("^user can see all checkboxes are unmarked$")
+    @Then("^user can sees all checkboxes are unmarked$")
     public void seeEmptyAllCheckboxes() {
-        Assert.assertEquals(EXPECTED_COUNT_OF_UNMARKED_CHECKBOXES, mailBoxPage.getCountOfSelectedChecboxes());
+        Assert.assertEquals(0, mailBoxPage.getCountOfSelectedChecboxes());
     }
 
 
@@ -112,7 +112,7 @@ public class MailBoxPageSteps extends AbstractPage {
         mailBoxPage.clickSendButton();
     }
 
-    @Then("^user can see the message that mail was sended$")
+    @Then("^user can sees the message that mail was sended$")
     public void seeMailWasSended() {
         Assert.assertTrue(mailBoxPage.messageIsPresent());
     }

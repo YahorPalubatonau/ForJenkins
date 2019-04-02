@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1554211504344" stop="1554211508739" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Test VK page</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1554211504640" stop="1554211508579" status="passed">
+            <name>Verify that user adds comment on VK wall</name>
+            <title>Verify that user adds comment on VK wall</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1554211504656" stop="1554211505335" status="passed">
+                    <name>When user enters comment</name>
+                    <title>When user enters comment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1554211505336" stop="1554211508575" status="passed">
+                    <name>Then user can sees new comment on VK wall</name>
+                    <title>Then user can sees new comment on VK wall</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Verify that user adds comment on VK wall"/>
+                <label name="feature" value="Test VK page"/>
+                <label name="host" value="LAPTOP-AHFH51BG"/>
+                <label name="thread" value="708@LAPTOP-AHFH51BG.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1554211508677" stop="1554211508735" status="broken">
+            <name>Verify that user edits himself comment on VK wall</name>
+            <title>Verify that user edits himself comment on VK wall</title>
+            <description type="text"></description>
+            <failure>
+                <message>NullPointerException: null</message>
+                <stack-trace>java.lang.NullPointerException
+	at api.СreatorForBuilder.getPostID(СreatorForBuilder.java:32)
+	at api.VkAPIConnect.editCommit(VkAPIConnect.java:22)
+	at stepDefinitions.APISteps.correctCommit(APISteps.java:28)
+	at ✽.When user corrected comment(API.feature:9)
+</stack-trace>
+            </failure>
+            <steps>
+                <step start="1554211508677" stop="1554211508731" status="broken">
+                    <name>When user corrected comment</name>
+                    <title>When user corrected comment</title>
+                </step>
+                <step start="1554211508731" stop="1554211508735" status="canceled">
+                    <name>Then user sees the corrected comment</name>
+                    <title>Then user sees the corrected comment</title>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Verify that user edits himself comment on VK wall"/>
+                <label name="feature" value="Test VK page"/>
+                <label name="host" value="LAPTOP-AHFH51BG"/>
+                <label name="thread" value="708@LAPTOP-AHFH51BG.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Test VK page"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

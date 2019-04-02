@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<ns2:test-suite start="1554211010063" stop="1554211015715" version="1.5.2" xmlns:ns2="urn:model.allure.qatools.yandex.ru">
+    <name>Test VK page</name>
+    <description type="text"></description>
+    <test-cases>
+        <test-case start="1554211010306" stop="1554211014632" status="passed">
+            <name>Verify that user adds comment on VK wall</name>
+            <title>Verify that user adds comment on VK wall</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1554211010326" stop="1554211011496" status="passed">
+                    <name>When user enters comment</name>
+                    <title>When user enters comment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1554211011496" stop="1554211014627" status="passed">
+                    <name>Then user can sees new comment on VK wall</name>
+                    <title>Then user can sees new comment on VK wall</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Verify that user adds comment on VK wall"/>
+                <label name="feature" value="Test VK page"/>
+                <label name="host" value="LAPTOP-AHFH51BG"/>
+                <label name="thread" value="17692@LAPTOP-AHFH51BG.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+        <test-case start="1554211014709" stop="1554211015705" status="passed">
+            <name>Verify that user edits himself comment on VK wall</name>
+            <title>Verify that user edits himself comment on VK wall</title>
+            <description type="text"></description>
+            <steps>
+                <step start="1554211014710" stop="1554211015281" status="passed">
+                    <name>When user corrected comment</name>
+                    <title>When user corrected comment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+                <step start="1554211015282" stop="1554211015705" status="passed">
+                    <name>Then user sees the corrected comment</name>
+                    <title>Then user sees the corrected comment</title>
+                    <attachments/>
+                    <steps/>
+                </step>
+            </steps>
+            <attachments/>
+            <labels>
+                <label name="story" value="Verify that user edits himself comment on VK wall"/>
+                <label name="feature" value="Test VK page"/>
+                <label name="host" value="LAPTOP-AHFH51BG"/>
+                <label name="thread" value="17692@LAPTOP-AHFH51BG.main(1)"/>
+                <label name="framework" value="CucumberJVM"/>
+            </labels>
+        </test-case>
+    </test-cases>
+    <labels>
+        <label name="feature" value="Test VK page"/>
+        <label name="language" value="JAVA"/>
+    </labels>
+</ns2:test-suite>

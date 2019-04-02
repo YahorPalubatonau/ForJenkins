@@ -10,6 +10,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import webDriver.Singleton;
 
+import java.util.List;
 import java.util.concurrent.TimeUnit;
 
 public class LoginPage extends AbstractPage {
@@ -19,6 +20,15 @@ public class LoginPage extends AbstractPage {
 
     @FindBy(id = "mailbox:login")
     private WebElement loginField;
+
+    @FindBy(xpath = ".//a[@class ='logo__img']")
+    private WebElement logoField;
+
+    @FindBy(xpath = ".//input[@name='q']")
+    private WebElement searchFileldOnMailRu;
+
+    @FindBy(xpath = ".//div[@id='suggests-list']//div")
+    private List<WebElement> listItemsOfSuggests;
 
     @FindBy(id = "mailbox:password")
     private WebElement passwordField;
@@ -55,5 +65,17 @@ public class LoginPage extends AbstractPage {
     public boolean logoutLinkPresents() {
        return waitForWebElementPresent(logoutLink);
 
+    }
+    public boolean logoMailRuPresents() {
+        return waitForWebElementPresent(loginField);
+    }
+
+    public void enterTreeSymbols() {
+        searchFileldOnMailRu.clear();
+        searchFileldOnMailRu.sendKeys("sfg");
+    }
+
+    public int countsOfSuggests() {
+       return listItemsOfSuggests.size();
     }
 }
